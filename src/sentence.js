@@ -1,3 +1,10 @@
+const moment = require('moment');
+
+function mapDateToSentence(date) {
+  const time = moment(date).format('hh:mm');
+  return mapTimeToSentence(time);
+}
+
 const NUMBERS = [
   'null',
   'EINS',
@@ -64,5 +71,6 @@ function mapTimeToSentence(time) {
 }
 
 module.exports = {
+  mapDateToSentence,
   mapTimeToSentence,
 };

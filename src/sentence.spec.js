@@ -1,4 +1,11 @@
-const { mapTimeToSentence } = require('./sentence');
+const { mapDateToSentence, mapTimeToSentence } = require('./sentence');
+
+describe('mapDateToSentence()', () => {
+  it('takes a date and maps it to a display time', () => {
+    const date = new Date('2017-12-16T21:10:09+01:00');
+    expect(mapDateToSentence(date)).toEqual({ minutes: 'ZEHN', relation: 'NACH', hours: 'NEUN' });
+  });
+});
 
 describe('mapTimeToSentence()', () => {
   it('maps a 12 hour time to a sentence', () => {

@@ -63,11 +63,11 @@ function mapTimeToSentence(time) {
 }
 
 describe('mapTimeToSentence()', () => {
-  xit('maps a 12 hour time to a sentence', () => {
+  it('maps a 12 hour time to a sentence', () => {
     expect(mapTimeToSentence('9:10')).toEqual({ minutes: 'ZEHN', relation: 'NACH', hours: 'NEUN' });
   });
 
-  it('handles the minutes 1-10', () => {
+  it('treats the minutes 1-10 as X NACH', () => {
     expect(mapTimeToSentence('9:01')).toEqual({ minutes: 'EINS', relation: 'NACH', hours: 'NEUN' });
     expect(mapTimeToSentence('9:02')).toEqual({ minutes: 'ZWEI', relation: 'NACH', hours: 'NEUN' });
     expect(mapTimeToSentence('9:10')).toEqual({ minutes: 'ZEHN', relation: 'NACH', hours: 'NEUN' });
@@ -160,7 +160,7 @@ describe('mapTimeToSentence()', () => {
     });
   });
 
-  it('handles minutes 51-59 as X VOR', () => {
+  it('treats minutes 51-59 as X VOR', () => {
     expect(mapTimeToSentence('9:51')).toEqual({
       minutes: 'NEUN',
       relation: 'VOR',
@@ -173,7 +173,7 @@ describe('mapTimeToSentence()', () => {
     });
   });
 
-  it('handles 9:00', () => {
+  it('treats 9:00 as ES IST 9 UHR', () => {
     expect(mapTimeToSentence('9:00')).toEqual({
       it: 'ES',
       is: 'IST',

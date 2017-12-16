@@ -15,6 +15,29 @@ const DISPLAY = [
 
 const EMPTY_DISPLAY_LINE = '           ';
 
+function displaySentence({ it, is, minutes, relation, hours, oclock }) {
+  let readout = makeEmptyReadout();
+  readout = displayWordWithinLines({ readout, word: it, firstLine: 0, lastLine: 0 });
+  readout = displayWordWithinLines({ readout, word: is, firstLine: 0, lastLine: 0 });
+  readout = displayWordWithinLines({ readout, word: minutes, firstLine: 0, lastLine: 2 });
+  readout = displayWordWithinLines({ readout, word: relation, firstLine: 3, lastLine: 3 });
+  readout = displayWordWithinLines({ readout, word: hours, firstLine: 4, lastLine: 9 });
+  readout = displayWordWithinLines({ readout, word: oclock, firstLine: 9, lastLine: 9 });
+  return readout;
+}
+
+function displayWordWithinLines({ readout, word, firstLine, lastLine }) {
+  if (!word) {
+    return readout;
+  }
+  for (let line = firstLine; line <= lastLine; line += 1) {
+    if (DISPLAY[line].includes(word)) {
+      return displayWord(readout, word, line);
+    }
+  }
+  throw new Error(`Expected to find word ${word} within lines ${firstLine} and ${lastLine}`);
+}
+
 function makeEmptyReadout() {
   const readout = [];
   for (let i = 0; i < DISPLAY.length; i += 1) {
@@ -29,52 +52,13 @@ function displayWord(readout, word, line) {
   if (index < 0) {
     throw new Error(`Cant find word ${word} in line ${line}`);
   }
-  const newReadout = _.cloneDeep(readout);
+  const newReadout = _.clone(readout);
   newReadout[line] =
     readout[line].substring(0, index) +
     word +
     readout[line].substring(index + word.length, EMPTY_DISPLAY_LINE.length);
 
   return newReadout;
-}
-
-function mapSentenceToDisplay(sentence) {
-  const words = sentence.split(' ');
-  let wordsIndex = 0;
-  const readout = DISPLAY.map(displayLine => {
-    let currentReadoutLine = '';
-    let currentLineIndex = 0;
-    if (wordsIndex >= words.length) {
-      return EMPTY_DISPLAY_LINE;
-    }
-    while (true) {
-      if (wordsIndex >= words.length) {
-        // Append spaces for the line up to the match
-        currentReadoutLine += EMPTY_DISPLAY_LINE.substring(
-          currentLineIndex,
-          EMPTY_DISPLAY_LINE.length
-        );
-        return currentReadoutLine;
-      }
-      const currentWord = words[wordsIndex];
-      const matchIndex = displayLine.indexOf(currentWord, currentLineIndex);
-      if (!matchIndex) {
-        // Append spaces for the line up to the match
-        currentReadoutLine += EMPTY_DISPLAY_LINE.substring(currentLineIndex, matchIndex);
-        return currentReadoutLine;
-      } else {
-        // Append spaces for the line up to the match
-        currentReadoutLine += EMPTY_DISPLAY_LINE.substring(currentLineIndex, matchIndex);
-        // APPEND the actual word
-        currentReadoutLine += currentWord;
-        // We are done with this word
-        wordsIndex += 1;
-        currentLineIndex = currentReadoutLine.length;
-      }
-    }
-  });
-
-  return readout;
 }
 
 describe('display', () => {
@@ -96,7 +80,7 @@ describe('display', () => {
   });
 
   describe('displayWord()', () => {
-    it('updates a readout', () => {
+    it('puts the given word in a readout in the given line', () => {
       const readout = makeEmptyReadout();
       expect(displayWord(readout, 'VIER', 2)).toEqual([
         '           ',
@@ -112,7 +96,7 @@ describe('display', () => {
       ]);
     });
 
-    it('handles the same number in different places', () => {
+    it('displays the same word in different lines', () => {
       const readout = makeEmptyReadout();
       expect(displayWord(readout, 'VIER', 6)).toEqual([
         '           ',
@@ -147,35 +131,60 @@ describe('display', () => {
       ]);
     });
   });
-  // describe('mapSentenceToDisplay()', () => {
-  //   it('handles VIERTEL VOR ZWEI', () => {
-  //     expect(mapSentenceToDisplay('VIERTEL VOR ZWEI')).toEqual([
-  //       '           ',
-  //       '           ',
-  //       '    VIERTEL',
-  //       'VOR        ',
-  //       '           ',
-  //       '       ZWEI',
-  //       '           ',
-  //       '           ',
-  //       '           ',
-  //       '           ',
-  //     ]);
-  //   });
-  //
-  //   it('handles VIERTEL NACH ZWEI', () => {
-  //     expect(mapSentenceToDisplay('VIERTEL NACH ZWEI')).toEqual([
-  //       '           ',
-  //       '           ',
-  //       '    VIERTEL',
-  //       '       NACH',
-  //       '           ',
-  //       '       ZWEI',
-  //       '           ',
-  //       '           ',
-  //       '           ',
-  //       '           ',
-  //     ]);
-  //   });
-  // });
+
+  describe('displaySentence()', () => {
+    it('displays the given sentence in a readout', () => {
+      expect(displaySentence({ minutes: 'VIERTEL', relation: 'VOR', hours: 'ZWEI' })).toEqual([
+        '           ',
+        '           ',
+        '    VIERTEL',
+        'VOR        ',
+        '           ',
+        '       ZWEI',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+      ]);
+    });
+
+    it('handles ZEHN NACH NEUN', () => {
+      expect(displaySentence({ minutes: 'ZEHN', relation: 'NACH', hours: 'NEUN' })).toEqual([
+        '           ',
+        'ZEHN       ',
+        '           ',
+        '       NACH',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '   NEUN    ',
+      ]);
+    });
+
+    it('handles DREI UHR', () => {
+      expect(
+        displaySentence({
+          it: 'ES',
+          is: 'IST',
+          minutes: undefined,
+          relation: undefined,
+          hours: 'NEUN',
+          oclock: 'UHR',
+        })
+      ).toEqual([
+        'ES IST     ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '   NEUN UHR',
+      ]);
+    });
+  });
 });

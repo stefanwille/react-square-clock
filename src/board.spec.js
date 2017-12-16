@@ -15,8 +15,27 @@ const DISPLAY = [
 
 const EMPTY_DISPLAY_LINE = '           ';
 
-function displaySentence({ minutes, relation, hours }) {
-  return makeEmptyReadout();
+function displaySentence({ it, is, minutes, relation, hours, oclock }) {
+  let readout = makeEmptyReadout();
+  readout = displayWordWithinLines({ readout, word: it, firstLine: 0, lastLine: 0 });
+  readout = displayWordWithinLines({ readout, word: is, firstLine: 0, lastLine: 0 });
+  readout = displayWordWithinLines({ readout, word: minutes, firstLine: 0, lastLine: 2 });
+  readout = displayWordWithinLines({ readout, word: relation, firstLine: 3, lastLine: 3 });
+  readout = displayWordWithinLines({ readout, word: hours, firstLine: 4, lastLine: 9 });
+  readout = displayWordWithinLines({ readout, word: oclock, firstLine: 9, lastLine: 9 });
+  return readout;
+}
+
+function displayWordWithinLines({ readout, word, firstLine, lastLine }) {
+  if (!word) {
+    return readout;
+  }
+  for (let line = firstLine; line <= lastLine; line += 1) {
+    if (DISPLAY[line].includes(word)) {
+      return displayWord(readout, word, line);
+    }
+  }
+  throw new Error(`Expected to find word ${word} within lines ${firstLine} and ${lastLine}`);
 }
 
 function makeEmptyReadout() {
@@ -128,21 +147,44 @@ describe('display', () => {
         '           ',
       ]);
     });
-  });
 
-  //   it('handles VIERTEL NACH ZWEI', () => {
-  //     expect(mapSentenceToDisplay('VIERTEL NACH ZWEI')).toEqual([
-  //       '           ',
-  //       '           ',
-  //       '    VIERTEL',
-  //       '       NACH',
-  //       '           ',
-  //       '       ZWEI',
-  //       '           ',
-  //       '           ',
-  //       '           ',
-  //       '           ',
-  //     ]);
-  //   });
-  // });
+    it('handles ZEHN NACH NEUN', () => {
+      expect(displaySentence({ minutes: 'ZEHN', relation: 'NACH', hours: 'NEUN' })).toEqual([
+        '           ',
+        'ZEHN       ',
+        '           ',
+        '       NACH',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '   NEUN    ',
+      ]);
+    });
+
+    it('handles DREI UHR', () => {
+      expect(
+        displaySentence({
+          it: 'ES',
+          is: 'IST',
+          minutes: undefined,
+          relation: undefined,
+          hours: 'NEUN',
+          oclock: 'UHR',
+        })
+      ).toEqual([
+        'ES IST     ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '   NEUN UHR',
+      ]);
+    });
+  });
 });

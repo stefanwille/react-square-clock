@@ -80,4 +80,5 @@ module.exports = {
   findDisplayLineThatCanDisplayWord,
   makeEmptyReadout,
   displayWord,
+  DISPLAY,
 };

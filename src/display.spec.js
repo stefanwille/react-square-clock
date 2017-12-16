@@ -15,11 +15,12 @@ const DISPLAY = [
 
 const EMPTY_DISPLAY_LINE = '           ';
 
-function displaySentence({ it, is, minutes, relation, hours, oclock }) {
+function displaySentence({ it, is, minutes, fraction, relation, hours, oclock }) {
   let readout = makeEmptyReadout();
   readout = displayWordWithinLines({ readout, word: it, firstLine: 0, lastLine: 0 });
   readout = displayWordWithinLines({ readout, word: is, firstLine: 0, lastLine: 0 });
   readout = displayWordWithinLines({ readout, word: minutes, firstLine: 0, lastLine: 2 });
+  readout = displayWordWithinLines({ readout, word: fraction, firstLine: 0, lastLine: 9 });
   readout = displayWordWithinLines({ readout, word: relation, firstLine: 3, lastLine: 3 });
   readout = displayWordWithinLines({ readout, word: hours, firstLine: 4, lastLine: 9 });
   readout = displayWordWithinLines({ readout, word: oclock, firstLine: 9, lastLine: 9 });
@@ -211,6 +212,27 @@ describe('display', () => {
         '           ',
         '           ',
         '   NEUN UHR',
+      ]);
+    });
+
+    it('handles VIERTEL NACH NEUN', () => {
+      expect(
+        displaySentence({
+          fraction: 'VIERTEL',
+          relation: 'NACH',
+          hours: 'NEUN',
+        })
+      ).toEqual([
+        '           ',
+        '           ',
+        '    VIERTEL',
+        '       NACH',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '           ',
+        '   NEUN    ',
       ]);
     });
   });

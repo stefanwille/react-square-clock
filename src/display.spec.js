@@ -28,14 +28,26 @@ function displaySentence({ it, is, minutes, relation, hours, oclock }) {
 
 function displayWordWithinLines({ readout, word, firstLine, lastLine }) {
   if (!word) {
+    // Nothing to display
     return readout;
   }
+
+  const line = findDisplayLineThatCanDisplayWord({ word, firstLine, lastLine });
+  if (line === undefined) {
+    throw new Error(`Expected to find word ${word} within lines ${firstLine} and ${lastLine}`);
+  }
+
+  return displayWord(readout, word, line);
+}
+
+function findDisplayLineThatCanDisplayWord({ word, firstLine, lastLine }) {
   for (let line = firstLine; line <= lastLine; line += 1) {
     if (DISPLAY[line].includes(word)) {
-      return displayWord(readout, word, line);
+      return line;
     }
   }
-  throw new Error(`Expected to find word ${word} within lines ${firstLine} and ${lastLine}`);
+
+  return undefined;
 }
 
 function makeEmptyReadout() {
@@ -132,6 +144,21 @@ describe('display', () => {
     });
   });
 
+  describe('findDisplayLineThatCanDisplayWord()', () => {
+    it('finds the line number within given boundaries in the display that contains the given word', () => {
+      expect(
+        findDisplayLineThatCanDisplayWord({ word: 'VIERTEL', firstLine: 0, lastLine: 5 })
+      ).toBe(2);
+      expect(findDisplayLineThatCanDisplayWord({ word: 'NACH', firstLine: 0, lastLine: 5 })).toBe(
+        3
+      );
+    });
+
+    it('handles ES', () => {
+      expect(findDisplayLineThatCanDisplayWord({ word: 'ES', firstLine: 0, lastLine: 0 })).toBe(0);
+    });
+  });
+
   describe('displaySentence()', () => {
     it('displays the given sentence in a readout', () => {
       expect(displaySentence({ minutes: 'VIERTEL', relation: 'VOR', hours: 'ZWEI' })).toEqual([
@@ -163,7 +190,7 @@ describe('display', () => {
       ]);
     });
 
-    it('handles DREI UHR', () => {
+    it('handles ES IST DREI UHR', () => {
       expect(
         displaySentence({
           it: 'ES',

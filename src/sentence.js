@@ -23,8 +23,8 @@ const NUMBERS = [
 
 function mapTimeToSentence(time) {
   const [hoursString, minutesString] = time.split(':');
-  const hours = parseInt(hoursString);
-  const minutes = parseInt(minutesString);
+  const hours = parseInt(hoursString, 10);
+  const minutes = parseInt(minutesString, 10);
   const sentence = {};
   let nextHour = false;
 

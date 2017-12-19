@@ -12,6 +12,10 @@ describe('mapTimeToSentence()', () => {
     expect(mapTimeToSentence('9:10')).toEqual({ minutes: 'ZEHN', relation: 'NACH', hours: 'NEUN' });
   });
 
+  it('maps 12:35 to HALB EINS', () => {
+    expect(mapTimeToSentence('12:35')).toEqual({ fraction: 'HALB', hours: 'EINS' });
+  });
+
   it('treats the minutes 1-10 as X NACH', () => {
     expect(mapTimeToSentence('9:01')).toEqual({ minutes: 'EINS', relation: 'NACH', hours: 'NEUN' });
     expect(mapTimeToSentence('9:02')).toEqual({ minutes: 'ZWEI', relation: 'NACH', hours: 'NEUN' });

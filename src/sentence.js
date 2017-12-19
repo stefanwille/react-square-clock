@@ -23,16 +23,16 @@ const NUMBERS = [
 
 function mapTimeToSentence(time) {
   const [hoursString, minutesString] = time.split(':');
-  const hours = parseInt(hoursString, 10);
+  let hours = parseInt(hoursString, 10);
   const minutes = parseInt(minutesString, 10);
   const sentence = {};
-  let nextHour = false;
 
   if (minutes === 0) {
     sentence.it = 'ES';
     sentence.is = 'IST';
     sentence.hours = hours;
     sentence.oclock = 'UHR';
+    // 3, 4, 5,
   } else if (minutes >= 1 && minutes <= 10) {
     sentence.minutes = NUMBERS[minutes];
     sentence.relation = 'NACH';
@@ -44,28 +44,29 @@ function mapTimeToSentence(time) {
     sentence.relation = 'NACH';
   } else if (minutes >= 18 && minutes <= 35) {
     sentence.fraction = 'HALB';
-    nextHour = true;
+    hours += 1;
   } else if (minutes >= 36 && minutes <= 43) {
     sentence.minutes = 'ZWANZIG';
     sentence.relation = 'VOR';
-    nextHour = true;
+    hours += 1;
   } else if (minutes >= 44 && minutes <= 47) {
     sentence.fraction = 'VIERTEL';
     sentence.relation = 'VOR';
-    nextHour = true;
+    hours += 1;
   } else if (minutes >= 48 && minutes <= 50) {
     sentence.minutes = 'ZEHN';
     sentence.relation = 'VOR';
-    nextHour = true;
+    hours += 1;
   } else if (minutes >= 51 && minutes <= 59) {
     sentence.minutes = NUMBERS[60 - minutes];
     sentence.relation = 'VOR';
-    nextHour = true;
+    hours += 1;
   } else {
-    throw new Error(`Ui?!? ${time}`);
+    throw new Error(`How do I deal with this time?!? ${time}`);
   }
 
-  sentence.hours = NUMBERS[nextHour ? hours + 1 : hours];
+  hours = hours % 12;
+  sentence.hours = NUMBERS[hours];
 
   return sentence;
 }

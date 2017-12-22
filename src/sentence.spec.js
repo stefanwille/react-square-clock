@@ -1,14 +1,9 @@
 //@ts-check
-const { mapDateToSentence, mapTimeToSentence } = require("./sentence");
-
-function toNaturalLanguage(sentence) {
-  const { it, is, minutes, fraction, relation, hours, oclock } = sentence;
-  const words = [it, is, minutes, fraction, relation, hours, oclock].filter(
-    word => !!word
-  );
-  const natural = words.join(" ");
-  return natural;
-}
+const {
+  mapDateToSentence,
+  mapTimeToSentence,
+  toNaturalLanguage
+} = require("./sentence");
 
 describe("mapDateToSentence()", () => {
   it("takes a date and maps it to a display time", () => {
@@ -31,7 +26,7 @@ describe("mapTimeToSentence()", () => {
       });
     });
 
-    it("can be read as natural language", () => {
+    it("can be converted to natural language", () => {
       expect(toNaturalLanguage(mapTimeToSentence("9:10"))).toBe(
         "ZEHN NACH NEUN"
       );

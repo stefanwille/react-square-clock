@@ -81,7 +81,18 @@ function mapTimeToSentence(time) {
   return sentence;
 }
 
+function toNaturalLanguage(sentence) {
+  const { it, is, minutes, fraction, relation, hours, oclock } = sentence;
+  const present = word => !!word;
+  const words = [it, is, minutes, fraction, relation, hours, oclock].filter(
+    present
+  );
+  const natural = words.join(" ");
+  return natural;
+}
+
 module.exports = {
   mapDateToSentence,
-  mapTimeToSentence
+  mapTimeToSentence,
+  toNaturalLanguage
 };

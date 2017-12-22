@@ -1,0 +1,1081 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mapDateToDisplay all hours maps 1:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "EINS       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 2:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "       ZWEI",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 3:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "DREI       ",
+  "           ",
+  "           ",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 4:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "       VIER",
+  "           ",
+  "           ",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 5:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "       FÜNF",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 6:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "SECHS      ",
+  "           ",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 7:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "SIEBEN     ",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 8:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "       ACHT",
+  "           ",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 9:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 10:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 11:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "     ELF   ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all hours maps 12:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "      ZWÖLF",
+  "           ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:00 1`] = `
+Array [
+  "ES IST     ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN UHR",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:01 1`] = `
+Array [
+  "ES IST     ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN UHR",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:02 1`] = `
+Array [
+  "ES IST     ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN UHR",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:03 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:04 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:05 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:06 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:07 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:08 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:09 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:10 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:11 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:12 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:13 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:14 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:15 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:16 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:17 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:18 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:19 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:20 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:21 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:22 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:23 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:24 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "       NACH",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "   NEUN    ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:25 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:26 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:27 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:28 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:29 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:30 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:31 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:32 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:33 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:34 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:35 1`] = `
+Array [
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "HALB       ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:36 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:37 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:38 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:39 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:40 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:41 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:42 1`] = `
+Array [
+  "           ",
+  "    ZWANZIG",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:43 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:44 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:45 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:46 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:47 1`] = `
+Array [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:48 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:49 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:50 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:51 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:52 1`] = `
+Array [
+  "           ",
+  "ZEHN       ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:53 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:54 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:55 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:56 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:57 1`] = `
+Array [
+  "       FÜNF",
+  "           ",
+  "           ",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       ",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:58 1`] = `
+Array [
+  "ES IST     ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN    UHR",
+]
+`;
+
+exports[`mapDateToDisplay all minutes maps 09:59 1`] = `
+Array [
+  "ES IST     ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN    UHR",
+]
+`;

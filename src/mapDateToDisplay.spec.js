@@ -20,19 +20,25 @@ describe("mapDateToDisplay", () => {
     ]);
   });
 
-  // it("maps any minute without crashing", () => {
-  //   for (let minutes = 0; minutes < 60; minutes += 1) {
-  //     console.log("minutes", minutes);
-  //     const date = new Date(
-  //       `2017-12-16T09:${String(minutes).padStart(2, "0")}:00+01:00`
-  //     );
-  //     mapDateToDisplay(date);
-  //   }
-  // });
-  //
-  // it('can map any hour without crashing', () => {
-  //   for (let hours = 0; hours < 60; hours += 1) {
-  //     mapTimeToSentence(`${hours}:0`);
-  //   }
-  // });
+  describe("all hours", () => {
+    for (let hours = 1; hours <= 12; hours += 1) {
+      const hoursStr = String(hours).padStart(2, "0");
+      const date = new Date(`2017-12-16T${hoursStr}:05:00+01:00`);
+
+      it(`maps ${hours}:05`, () => {
+        expect(mapDateToDisplay(date)).toMatchSnapshot();
+      });
+    }
+  });
+
+  describe("all minutes", () => {
+    for (let minutes = 0; minutes < 60; minutes += 1) {
+      const minutesStr = String(minutes).padStart(2, "0");
+      const date = new Date(`2017-12-16T09:${minutesStr}:00+01:00`);
+
+      it(`maps 09:${minutesStr}`, () => {
+        expect(mapDateToDisplay(date)).toMatchSnapshot();
+      });
+    }
+  });
 });

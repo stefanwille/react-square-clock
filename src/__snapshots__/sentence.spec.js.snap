@@ -28,9 +28,9 @@ exports[`mapTimeToSentence() all minutes maps 3:1 1`] = `"ES IST DREI UHR"`;
 
 exports[`mapTimeToSentence() all minutes maps 3:2 1`] = `"ES IST DREI UHR"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:3 1`] = `"FÜNF NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 3:3 1`] = `"DREI NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:4 1`] = `"FÜNF NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 3:4 1`] = `"VIER NACH DREI"`;
 
 exports[`mapTimeToSentence() all minutes maps 3:5 1`] = `"FÜNF NACH DREI"`;
 
@@ -134,9 +134,9 @@ exports[`mapTimeToSentence() all minutes maps 3:54 1`] = `"FÜNF VOR VIER"`;
 
 exports[`mapTimeToSentence() all minutes maps 3:55 1`] = `"FÜNF VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:56 1`] = `"FÜNF VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 3:56 1`] = `"VIER VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:57 1`] = `"FÜNF VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 3:57 1`] = `"DREI VOR VIER"`;
 
 exports[`mapTimeToSentence() all minutes maps 3:58 1`] = `"ES IST VIER UHR"`;
 

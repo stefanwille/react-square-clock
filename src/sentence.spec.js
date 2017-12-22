@@ -45,7 +45,7 @@ describe("mapTimeToSentence()", () => {
   describe("all minutes", () => {
     for (let minutes = 1; minutes < 60; minutes += 1) {
       const time = `3:${minutes}`;
-      it.only(`maps ${time}`, () => {
+      it(`maps ${time}`, () => {
         expect(toNaturalLanguage(mapTimeToSentence(time))).toMatchSnapshot();
       });
     }

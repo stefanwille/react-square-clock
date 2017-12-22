@@ -35,7 +35,13 @@ function mapTimeToSentence(time) {
     sentence.it = "ES";
     sentence.is = "IST";
     sentence.oclock = "UHR";
-  } else if (minutes >= 3 && minutes <= 7) {
+  } else if (minutes === 3) {
+    sentence.minutes = NUMBERS.get(3);
+    sentence.relation = "NACH";
+  } else if (minutes === 4) {
+    sentence.minutes = NUMBERS.get(4);
+    sentence.relation = "NACH";
+  } else if (minutes >= 4 && minutes <= 7) {
     sentence.minutes = NUMBERS.get(5);
     sentence.relation = "NACH";
   } else if (minutes >= 8 && minutes <= 12) {
@@ -62,8 +68,16 @@ function mapTimeToSentence(time) {
     sentence.minutes = NUMBERS.get(10);
     sentence.relation = "VOR";
     displayHours += 1;
-  } else if (minutesBefore >= 3 && minutesBefore <= 7) {
+  } else if (minutesBefore >= 5 && minutesBefore <= 7) {
     sentence.minutes = NUMBERS.get(5);
+    sentence.relation = "VOR";
+    displayHours += 1;
+  } else if (minutesBefore === 4) {
+    sentence.minutes = NUMBERS.get(4);
+    sentence.relation = "VOR";
+    displayHours += 1;
+  } else if (minutesBefore === 3) {
+    sentence.minutes = NUMBERS.get(3);
     sentence.relation = "VOR";
     displayHours += 1;
   } else if (minutesBefore <= 2) {

@@ -227,9 +227,9 @@ Array [
 
 exports[`mapDateToDisplay all minutes maps 09:03 1`] = `
 Array [
-  "       FÜNF",
   "           ",
   "           ",
+  "DREI       ",
   "       NACH",
   "           ",
   "           ",
@@ -242,9 +242,9 @@ Array [
 
 exports[`mapDateToDisplay all minutes maps 09:04 1`] = `
 Array [
-  "       FÜNF",
   "           ",
   "           ",
+  "    VIER   ",
   "       NACH",
   "           ",
   "           ",
@@ -1022,9 +1022,9 @@ Array [
 
 exports[`mapDateToDisplay all minutes maps 09:56 1`] = `
 Array [
-  "       FÜNF",
   "           ",
   "           ",
+  "    VIER   ",
   "VOR        ",
   "           ",
   "           ",
@@ -1037,9 +1037,9 @@ Array [
 
 exports[`mapDateToDisplay all minutes maps 09:57 1`] = `
 Array [
-  "       FÜNF",
   "           ",
   "           ",
+  "DREI       ",
   "VOR        ",
   "           ",
   "           ",

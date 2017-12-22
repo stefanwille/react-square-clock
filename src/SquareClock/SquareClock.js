@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import classNames from "classnames";
 import "./SquareClock.css";
 import { mapDateToDisplay } from "../mapDateToDisplay";
-import { DISPLAY, displaySentence, makeEmptyReadout } from "../display";
+import { DISPLAY, makeEmptyReadout } from "../display";
 
 const Character = ({ character, glowing }) => (
   <div className={classNames("Character", { glowing })}>{character}</div>
@@ -44,7 +44,7 @@ export default class SquareClock extends Component {
 
   componentDidMount() {
     this.updateReadout();
-    setInterval(() => this.updateReadout(), 10 * 1000);
+    setInterval(() => this.updateReadout(), 1 * 1000);
   }
 
   updateReadout() {

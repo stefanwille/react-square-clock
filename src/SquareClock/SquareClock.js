@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import './SquareClock.css';
-import { mapDateToSentence } from '../sentence';
-import { DISPLAY, displaySentence, makeEmptyReadout } from '../display';
+//@ts-check
+import React, { Component } from "react";
+import classNames from "classnames";
+import "./SquareClock.css";
+import { mapDateToDisplay } from "../mapDateToDisplay";
+import { DISPLAY, displaySentence, makeEmptyReadout } from "../display";
 
 const Character = ({ character, glowing }) => (
-  <div className={classNames('Character', { glowing })}>{character}</div>
+  <div className={classNames("Character", { glowing })}>{character}</div>
 );
 
 const Display = ({ readout }) => {
@@ -14,15 +15,21 @@ const Display = ({ readout }) => {
     <div
       className="SquareClock"
       style={{
-        gridTemplateColumns: `repeat(${width}, 1fr)`,
+        gridTemplateColumns: `repeat(${width}, 1fr)`
       }}
     >
       {readout.map((line, rowIndex) =>
-        line.split('').map((readoutCharacter, columnIndex) => {
+        line.split("").map((readoutCharacter, columnIndex) => {
           const displayCharacter = DISPLAY[rowIndex][columnIndex];
-          const glowing = readoutCharacter !== ' ';
+          const glowing = readoutCharacter !== " ";
           const key = `${rowIndex}-${columnIndex}`;
-          return <Character character={displayCharacter} glowing={glowing} key={key} />;
+          return (
+            <Character
+              character={displayCharacter}
+              glowing={glowing}
+              key={key}
+            />
+          );
         })
       )}
     </div>
@@ -42,8 +49,7 @@ export default class SquareClock extends Component {
 
   updateReadout() {
     const date = new Date();
-    const sentence = mapDateToSentence(date);
-    const readout = displaySentence(sentence);
+    const readout = mapDateToDisplay(date);
     this.setState({ readout });
   }
 

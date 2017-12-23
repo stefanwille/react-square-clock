@@ -14,7 +14,8 @@
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "build": "react-scripts build",
-    "deploy": "scp -r . sw:/home/www-data/sites/react-clock.stefanwille.com",
+    "deploy":
+      "yarn build && scp -r build/* sw:/home/www-data/sites/react-clock.stefanwille.com",
     "eject": "react-scripts eject"
   },
   "devDependencies": {

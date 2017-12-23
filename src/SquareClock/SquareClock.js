@@ -5,22 +5,30 @@ import "./SquareClock.css";
 import { mapDateToDisplay } from "../mapDateToDisplay";
 import { DISPLAY, makeEmptyReadout } from "../display";
 
-const Character = ({ character, glowing }) => (
-  <div className={classNames("Character", { glowing })}>{character}</div>
+const UPDATE_INTERVAL_SECONDS = 1000;
+
+const DisplayCharacter = ({ character, illuminated }) => (
+  <div className={classNames("Character", { illuminated })}>{character}</div>
 );
+
+const DisplayLine = ({ readoutLine, row }) =>
+  readoutLine.split("").map((readoutCharacter, column) => {
+    const displayCharacter = DISPLAY[row][column];
+    const illuminated = readoutCharacter !== " ";
+    return (
+      <DisplayCharacter
+        character={displayCharacter}
+        illuminated={illuminated}
+        key={column}
+      />
+    );
+  });
 
 const Display = ({ readout }) => (
   <div className="SquareClock">
-    {readout.map((line, rowIndex) =>
-      line.split("").map((readoutCharacter, columnIndex) => {
-        const displayCharacter = DISPLAY[rowIndex][columnIndex];
-        const glowing = readoutCharacter !== " ";
-        const key = `${rowIndex}-${columnIndex}`;
-        return (
-          <Character character={displayCharacter} glowing={glowing} key={key} />
-        );
-      })
-    )}
+    {readout.map((readoutLine, row) => (
+      <DisplayLine readoutLine={readoutLine} row={row} key={row} />
+    ))}
   </div>
 );
 
@@ -32,7 +40,7 @@ export default class SquareClock extends Component {
 
   componentDidMount() {
     this.updateReadout();
-    setInterval(() => this.updateReadout(), 1 * 1000);
+    setInterval(() => this.updateReadout(), UPDATE_INTERVAL_SECONDS * 1000);
   }
 
   updateReadout() {

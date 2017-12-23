@@ -2,7 +2,16 @@
 
 A clock that mimicks a hardware clock, built with React.
 
+## Demo
+
 Live: http://react-clock.stefanwille.com/
+
+## Deployment
+
+```bash
+$ yarn build
+$ yarn deploy
+```
 
 ---
 

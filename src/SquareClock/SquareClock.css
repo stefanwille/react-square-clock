@@ -1,13 +1,12 @@
 .SquareClock {
-  grid-template-columns: repeat(11, 1fr);
-  display: grid;
-  grid-gap: 2px;
-  justify-items: center;
-  align-items: center;
   color: #444;
 }
 
-.Character {
+.DisplayLine {
+  display: flex;
+}
+
+.DisplayCharacter {
   background-color: #222;
   color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
@@ -15,8 +14,10 @@
   height: 70px;
   line-height: 70px;
   font-size: 300%;
+  margin: 2px;
+  text-align: center;
 }
 
-.Character.illuminated {
+.DisplayCharacter.illuminated {
   color: rgba(255, 255, 255, 1);
 }

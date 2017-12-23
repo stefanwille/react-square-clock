@@ -8,21 +8,29 @@ import { DISPLAY, makeEmptyReadout } from "../display";
 const UPDATE_INTERVAL_SECONDS = 1000;
 
 const DisplayCharacter = ({ character, illuminated }) => (
-  <div className={classNames("Character", { illuminated })}>{character}</div>
+  <div className={classNames("DisplayCharacter", { illuminated })}>
+    {character}
+  </div>
 );
 
-const DisplayLine = ({ readoutLine, row }) =>
-  readoutLine.split("").map((readoutCharacter, column) => {
-    const displayCharacter = DISPLAY[row][column];
-    const illuminated = readoutCharacter !== " ";
-    return (
-      <DisplayCharacter
-        character={displayCharacter}
-        illuminated={illuminated}
-        key={column}
-      />
-    );
-  });
+const DisplayLine = ({ readoutLine, row }) => {
+  const characters = readoutLine.split("");
+  return (
+    <div className="DisplayLine">
+      {characters.map((readoutCharacter, column) => {
+        const displayCharacter = DISPLAY[row][column];
+        const illuminated = readoutCharacter !== " ";
+        return (
+          <DisplayCharacter
+            character={displayCharacter}
+            illuminated={illuminated}
+            key={column}
+          />
+        );
+      })}
+    </div>
+  );
+};
 
 const Display = ({ readout }) => (
   <div className="SquareClock">

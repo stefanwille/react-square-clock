@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`mapTimeToSentence() all hours maps 1:05 1`] = `"FÜNF NACH EINS"`;
+exports[`mapTimeToSentence() all hours maps 01:05 1`] = `"FÜNF NACH EINS"`;
 
-exports[`mapTimeToSentence() all hours maps 2:05 1`] = `"FÜNF NACH ZWEI"`;
+exports[`mapTimeToSentence() all hours maps 02:05 1`] = `"FÜNF NACH ZWEI"`;
 
-exports[`mapTimeToSentence() all hours maps 3:05 1`] = `"FÜNF NACH DREI"`;
+exports[`mapTimeToSentence() all hours maps 03:05 1`] = `"FÜNF NACH DREI"`;
 
-exports[`mapTimeToSentence() all hours maps 4:05 1`] = `"FÜNF NACH VIER"`;
+exports[`mapTimeToSentence() all hours maps 04:05 1`] = `"FÜNF NACH VIER"`;
 
-exports[`mapTimeToSentence() all hours maps 5:05 1`] = `"FÜNF NACH FÜNF"`;
+exports[`mapTimeToSentence() all hours maps 05:05 1`] = `"FÜNF NACH FÜNF"`;
 
-exports[`mapTimeToSentence() all hours maps 6:05 1`] = `"FÜNF NACH SECHS"`;
+exports[`mapTimeToSentence() all hours maps 06:05 1`] = `"FÜNF NACH SECHS"`;
 
-exports[`mapTimeToSentence() all hours maps 7:05 1`] = `"FÜNF NACH SIEBEN"`;
+exports[`mapTimeToSentence() all hours maps 07:05 1`] = `"FÜNF NACH SIEBEN"`;
 
-exports[`mapTimeToSentence() all hours maps 8:05 1`] = `"FÜNF NACH ACHT"`;
+exports[`mapTimeToSentence() all hours maps 08:05 1`] = `"FÜNF NACH ACHT"`;
 
-exports[`mapTimeToSentence() all hours maps 9:05 1`] = `"FÜNF NACH NEUN"`;
+exports[`mapTimeToSentence() all hours maps 09:05 1`] = `"FÜNF NACH NEUN"`;
 
 exports[`mapTimeToSentence() all hours maps 10:05 1`] = `"FÜNF NACH ZEHN"`;
 
@@ -24,120 +24,122 @@ exports[`mapTimeToSentence() all hours maps 11:05 1`] = `"FÜNF NACH ELF"`;
 
 exports[`mapTimeToSentence() all hours maps 12:05 1`] = `"FÜNF NACH ZWÖLF"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:1 1`] = `"ES IST DREI UHR"`;
+exports[`mapTimeToSentence() all minutes maps 03:00 1`] = `"ES IST DREI UHR"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:2 1`] = `"ES IST DREI UHR"`;
+exports[`mapTimeToSentence() all minutes maps 03:01 1`] = `"ES IST DREI UHR"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:3 1`] = `"DREI NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:02 1`] = `"ES IST DREI UHR"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:4 1`] = `"VIER NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:03 1`] = `"DREI NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:5 1`] = `"FÜNF NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:04 1`] = `"VIER NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:6 1`] = `"FÜNF NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:05 1`] = `"FÜNF NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:7 1`] = `"FÜNF NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:06 1`] = `"FÜNF NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:8 1`] = `"ZEHN NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:07 1`] = `"FÜNF NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:9 1`] = `"ZEHN NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:08 1`] = `"ZEHN NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:10 1`] = `"ZEHN NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:09 1`] = `"ZEHN NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:11 1`] = `"ZEHN NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:10 1`] = `"ZEHN NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:12 1`] = `"ZEHN NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:11 1`] = `"ZEHN NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:13 1`] = `"VIERTEL NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:12 1`] = `"ZEHN NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:14 1`] = `"VIERTEL NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:13 1`] = `"VIERTEL NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:15 1`] = `"VIERTEL NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:14 1`] = `"VIERTEL NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:16 1`] = `"VIERTEL NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:15 1`] = `"VIERTEL NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:17 1`] = `"VIERTEL NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:16 1`] = `"VIERTEL NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:18 1`] = `"ZWANZIG NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:17 1`] = `"VIERTEL NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:19 1`] = `"ZWANZIG NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:18 1`] = `"ZWANZIG NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:20 1`] = `"ZWANZIG NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:19 1`] = `"ZWANZIG NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:21 1`] = `"ZWANZIG NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:20 1`] = `"ZWANZIG NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:22 1`] = `"ZWANZIG NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:21 1`] = `"ZWANZIG NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:23 1`] = `"ZWANZIG NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:22 1`] = `"ZWANZIG NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:24 1`] = `"ZWANZIG NACH DREI"`;
+exports[`mapTimeToSentence() all minutes maps 03:23 1`] = `"ZWANZIG NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:25 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:24 1`] = `"ZWANZIG NACH DREI"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:26 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:25 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:27 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:26 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:28 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:27 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:29 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:28 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:30 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:29 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:31 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:30 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:32 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:31 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:33 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:32 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:34 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:33 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:35 1`] = `"HALB VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:34 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:36 1`] = `"ZWANZIG VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:35 1`] = `"HALB VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:37 1`] = `"ZWANZIG VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:36 1`] = `"ZWANZIG VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:38 1`] = `"ZWANZIG VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:37 1`] = `"ZWANZIG VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:39 1`] = `"ZWANZIG VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:38 1`] = `"ZWANZIG VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:40 1`] = `"ZWANZIG VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:39 1`] = `"ZWANZIG VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:41 1`] = `"ZWANZIG VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:40 1`] = `"ZWANZIG VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:42 1`] = `"ZWANZIG VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:41 1`] = `"ZWANZIG VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:43 1`] = `"VIERTEL VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:42 1`] = `"ZWANZIG VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:44 1`] = `"VIERTEL VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:43 1`] = `"VIERTEL VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:45 1`] = `"VIERTEL VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:44 1`] = `"VIERTEL VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:46 1`] = `"VIERTEL VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:45 1`] = `"VIERTEL VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:47 1`] = `"VIERTEL VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:46 1`] = `"VIERTEL VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:48 1`] = `"ZEHN VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:47 1`] = `"VIERTEL VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:49 1`] = `"ZEHN VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:48 1`] = `"ZEHN VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:50 1`] = `"ZEHN VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:49 1`] = `"ZEHN VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:51 1`] = `"ZEHN VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:50 1`] = `"ZEHN VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:52 1`] = `"ZEHN VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:51 1`] = `"ZEHN VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:53 1`] = `"FÜNF VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:52 1`] = `"ZEHN VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:54 1`] = `"FÜNF VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:53 1`] = `"FÜNF VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:55 1`] = `"FÜNF VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:54 1`] = `"FÜNF VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:56 1`] = `"VIER VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:55 1`] = `"FÜNF VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:57 1`] = `"DREI VOR VIER"`;
+exports[`mapTimeToSentence() all minutes maps 03:56 1`] = `"VIER VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:58 1`] = `"ES IST VIER UHR"`;
+exports[`mapTimeToSentence() all minutes maps 03:57 1`] = `"DREI VOR VIER"`;
 
-exports[`mapTimeToSentence() all minutes maps 3:59 1`] = `"ES IST VIER UHR"`;
+exports[`mapTimeToSentence() all minutes maps 03:58 1`] = `"ES IST VIER UHR"`;
+
+exports[`mapTimeToSentence() all minutes maps 03:59 1`] = `"ES IST VIER UHR"`;

@@ -1,46 +1,11 @@
-//@ts-check
-import React, { Component } from "react";
-import classNames from "classnames";
-import "./SquareClock.css";
-import { mapDateToDisplay } from "../mapDateToDisplay";
-import { DISPLAY, makeEmptyReadout } from "../display";
+import React, { Component } from 'react';
+import { mapDateToDisplay } from '../mapDateToDisplay';
+import { makeEmptyReadout } from '../display';
+import Display from './Display';
 
 const UPDATE_INTERVAL_SECONDS = 1000;
 
-const DisplayCharacter = ({ character, illuminated }) => (
-  <div className={classNames("DisplayCharacter", { illuminated })}>
-    {character}
-  </div>
-);
-
-const DisplayLine = ({ readoutLine, row }) => {
-  const characters = readoutLine.split("");
-  return (
-    <div className="DisplayLine">
-      {characters.map((readoutCharacter, column) => {
-        const displayCharacter = DISPLAY[row][column];
-        const illuminated = readoutCharacter !== " ";
-        return (
-          <DisplayCharacter
-            character={displayCharacter}
-            illuminated={illuminated}
-            key={column}
-          />
-        );
-      })}
-    </div>
-  );
-};
-
-const Display = ({ readout }) => (
-  <div className="SquareClock">
-    {readout.map((readoutLine, row) => (
-      <DisplayLine readoutLine={readoutLine} row={row} key={row} />
-    ))}
-  </div>
-);
-
-export default class SquareClock extends Component {
+class SquareClock extends Component {
   constructor(props) {
     super(props);
     this.state = { readout: makeEmptyReadout() };
@@ -62,3 +27,5 @@ export default class SquareClock extends Component {
     return <Display readout={readout} />;
   }
 }
+
+export default SquareClock;

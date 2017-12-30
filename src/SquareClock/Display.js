@@ -20,6 +20,7 @@ DisplayCharacter = styled(DisplayCharacter)`
   font-size: 200%;
   margin: 2px;
   text-align: center;
+  transition: color 0.5s ease-in;
 `;
 
 DisplayCharacter.propTypes = {

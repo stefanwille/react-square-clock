@@ -21,21 +21,46 @@ storiesOf("DisplayCharacter", module)
     </div>
   ));
 
-storiesOf("Display", module).add("with a readout", () => (
-  <div style={{ backgroundColor: "black" }}>
-    <Display
-      readout={[
-        "           ",
-        "           ",
-        "    VIERTEL",
-        "VOR        ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "ZEHN       "
-      ]}
-    />
-  </div>
-));
+const viertelVorZehn = [
+  "           ",
+  "           ",
+  "    VIERTEL",
+  "VOR        ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN       "
+];
+const zehn = [
+  "ES IST     ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "           ",
+  "ZEHN    UHR"
+];
+
+storiesOf("Display", module)
+  .addDecorator(withKnobs)
+  .add("with a readout", () => {
+    const before = boolean("before", true);
+    const readout = before ? viertelVorZehn : zehn;
+
+    return (
+      <div
+        style={{
+          backgroundColor: "black",
+          display: "flex",
+          placeItems: "center"
+        }}
+      >
+        <Display readout={readout} />
+      </div>
+    );
+  });

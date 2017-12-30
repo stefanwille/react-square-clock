@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { mapDateToDisplay } from '../mapDateToDisplay';
-import { makeEmptyReadout } from '../display';
-import Display from './Display';
+import React, { Component } from "react";
+import { mapDateToDisplay } from "../mapDateToDisplay";
+import { makeEmptyReadout } from "../display";
+import Display from "./Display";
 
-const UPDATE_INTERVAL_SECONDS = 1000;
+const UPDATE_INTERVAL_SECONDS = 60;
 
 class SquareClock extends Component {
   constructor(props) {
@@ -18,7 +18,10 @@ class SquareClock extends Component {
 
   updateReadout() {
     const date = new Date();
+    console.log("*updateReadout date", date);
     const readout = mapDateToDisplay(date);
+    console.log("readout");
+    console.log(readout.join("\n"));
     this.setState({ readout });
   }
 

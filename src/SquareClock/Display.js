@@ -14,10 +14,10 @@ DisplayCharacter = styled(DisplayCharacter)`
   color: ${props =>
     props.illuminated ? `rgba(255, 255, 255, 1)` : `rgba(255, 255, 255, 0.1)`};
   border-radius: 5px;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  font-size: 200%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 300%;
   margin: 2px;
   text-align: center;
   transition: color 0.5s ease-in;

@@ -1,7 +1,12 @@
-import React, { Component } from 'react';
-import './App.css';
-import SquareClock from './SquareClock/SquareClock';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import SquareClock from "./SquareClock/SquareClock";
+import styled, { injectGlobal } from "styled-components";
+
+injectGlobal`
+body {
+  background-color: black;
+}
+`;
 
 class App extends Component {
   render() {

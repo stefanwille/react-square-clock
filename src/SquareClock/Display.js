@@ -1,15 +1,18 @@
-import React from 'react';
-import classNames from 'classnames';
-import { DISPLAY } from '../display';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import { DISPLAY } from "../display";
+import styled from "styled-components";
 
-let DisplayCharacter = ({ character, className }) => (
-  <div className={classNames('DisplayCharacter', className)}>{character}</div>
+export let DisplayCharacter = ({ character, className }) => (
+  <div className={classNames("DisplayCharacter", className)}>{character}</div>
 );
 
 DisplayCharacter = styled(DisplayCharacter)`
+  font-family: sans-serif;
   background-color: #222;
-  color: ${props => (props.illuminated ? `rgba(255, 255, 255, 1)` : `rgba(255, 255, 255, 0.1)`)};
+  color: ${props =>
+    props.illuminated ? `rgba(255, 255, 255, 1)` : `rgba(255, 255, 255, 0.1)`};
   border-radius: 5px;
   width: 55px;
   height: 55px;
@@ -19,15 +22,25 @@ DisplayCharacter = styled(DisplayCharacter)`
   text-align: center;
 `;
 
+DisplayCharacter.propTypes = {
+  illuminated: PropTypes.bool.isRequired,
+  character: PropTypes.string.isRequired,
+  className: PropTypes.string
+};
+
 let DisplayLine = ({ readoutLine, row, className }) => {
-  const characters = readoutLine.split('');
+  const characters = readoutLine.split("");
   return (
-    <div className={classNames('DisplayLine', className)}>
+    <div className={classNames("DisplayLine", className)}>
       {characters.map((readoutCharacter, column) => {
         const displayCharacter = DISPLAY[row][column];
-        const illuminated = readoutCharacter !== ' ';
+        const illuminated = readoutCharacter !== " ";
         return (
-          <DisplayCharacter character={displayCharacter} illuminated={illuminated} key={column} />
+          <DisplayCharacter
+            character={displayCharacter}
+            illuminated={illuminated}
+            key={column}
+          />
         );
       })}
     </div>
@@ -38,7 +51,13 @@ DisplayLine = styled(DisplayLine)`
   display: flex;
 `;
 
-let Display = ({ readout }) => (
+DisplayLine.propTypes = {
+  readoutLine: PropTypes.string.isRequired,
+  row: PropTypes.number.isRequired,
+  className: PropTypes.string
+};
+
+export let Display = ({ readout }) => (
   <div className="SquareClock">
     {readout.map((readoutLine, row) => (
       <DisplayLine readoutLine={readoutLine} row={row} key={row} />
@@ -49,5 +68,10 @@ let Display = ({ readout }) => (
 Display = styled(Display)`
   color: #444;
 `;
+
+Display.propTypes = {
+  readout: PropTypes.array.isRequired,
+  className: PropTypes.string
+};
 
 export default Display;

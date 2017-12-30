@@ -5,6 +5,9 @@ import styled, { injectGlobal } from "styled-components";
 injectGlobal`
 body {
   background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 `;
 

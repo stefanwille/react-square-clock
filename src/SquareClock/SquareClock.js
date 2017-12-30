@@ -18,10 +18,7 @@ class SquareClock extends Component {
 
   updateReadout() {
     const date = new Date();
-    console.log("*updateReadout date", date);
     const readout = mapDateToDisplay(date);
-    console.log("readout");
-    console.log(readout.join("\n"));
     this.setState({ readout });
   }
 

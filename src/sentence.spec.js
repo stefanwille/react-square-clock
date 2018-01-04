@@ -37,11 +37,17 @@ describe('mapTimeToSentence()', () => {
   });
 
   describe('all minutes', () => {
-    for (let minutes = 0; minutes < 60; minutes += 1) {
+    for (let minutes = 0; minutes <= 59; minutes += 1) {
       const time = `03:${String(minutes).padStart(2, '0')}`;
       it(`maps ${time}`, () => {
         expect(toNaturalLanguage(mapTimeToSentence(time))).toMatchSnapshot();
       });
     }
   });
+
+  describe("with 12:50", () => {
+    it("wraps around to 1", () => {
+      expect(toNaturalLanguage(mapTimeToSentence("12:50"))).toBe("ZEHN VOR EINS");
+    });
+  });  
 });

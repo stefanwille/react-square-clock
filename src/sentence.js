@@ -22,6 +22,14 @@ const NUMBERS = new Map([
   [20, "ZWANZIG"]
 ]);
 
+function getNumber(n) {
+  const s = NUMBERS.get(n);
+  if(!s) {
+    throw new Error(`No NUMBER exists for ${n}`);
+  }
+  return s;
+}
+
 function mapTimeToSentence(time) {
   const [hoursString, minutesString] = time.split(":");
   const hours = parseInt(hoursString, 10);
@@ -36,28 +44,28 @@ function mapTimeToSentence(time) {
     sentence.is = "IST";
     sentence.oclock = "UHR";
   } else if (minutes === 3) {
-    sentence.minutes = NUMBERS.get(3);
+    sentence.minutes = getNumber(3);
     sentence.relation = "NACH";
   } else if (minutes === 4) {
-    sentence.minutes = NUMBERS.get(4);
+    sentence.minutes = getNumber(4);
     sentence.relation = "NACH";
   } else if (minutes >= 4 && minutes <= 7) {
-    sentence.minutes = NUMBERS.get(5);
+    sentence.minutes = getNumber(5);
     sentence.relation = "NACH";
   } else if (minutes >= 8 && minutes <= 12) {
-    sentence.minutes = NUMBERS.get(10);
+    sentence.minutes = getNumber(10);
     sentence.relation = "NACH";
   } else if (minutes >= 13 && minutes <= 17) {
     sentence.fraction = "VIERTEL";
     sentence.relation = "NACH";
   } else if (minutes >= 18 && minutes <= 24) {
-    sentence.minutes = NUMBERS.get(20);
+    sentence.minutes = getNumber(20);
     sentence.relation = "NACH";
   } else if (minutes >= 25 && minutes <= 35) {
     sentence.fraction = "HALB";
     displayHours += 1;
   } else if (minutesBefore >= 18 && minutesBefore <= 24) {
-    sentence.minutes = NUMBERS.get(20);
+    sentence.minutes = getNumber(20);
     sentence.relation = "VOR";
     displayHours += 1;
   } else if (minutesBefore >= 13 && minutesBefore <= 17) {
@@ -65,19 +73,19 @@ function mapTimeToSentence(time) {
     sentence.relation = "VOR";
     displayHours += 1;
   } else if (minutesBefore >= 8 && minutesBefore <= 12) {
-    sentence.minutes = NUMBERS.get(10);
+    sentence.minutes = getNumber(10);
     sentence.relation = "VOR";
     displayHours += 1;
   } else if (minutesBefore >= 5 && minutesBefore <= 7) {
-    sentence.minutes = NUMBERS.get(5);
+    sentence.minutes = getNumber(5);
     sentence.relation = "VOR";
     displayHours += 1;
   } else if (minutesBefore === 4) {
-    sentence.minutes = NUMBERS.get(4);
+    sentence.minutes = getNumber(4);
     sentence.relation = "VOR";
     displayHours += 1;
   } else if (minutesBefore === 3) {
-    sentence.minutes = NUMBERS.get(3);
+    sentence.minutes = getNumber(3);
     sentence.relation = "VOR";
     displayHours += 1;
   } else if (minutesBefore <= 2) {
@@ -89,8 +97,8 @@ function mapTimeToSentence(time) {
     throw new Error(`How do I deal with this time?!? ${time}`);
   }
 
-  displayHours = displayHours % 13;
-  sentence.hours = NUMBERS.get(displayHours);
+  displayHours = displayHours > 12 ? (displayHours  - 12) : displayHours;
+  sentence.hours = getNumber(displayHours);
 
   return sentence;
 }

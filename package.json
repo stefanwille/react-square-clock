@@ -15,8 +15,9 @@
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "build": "react-scripts build",
+    "clean": "rm -rf build/*",
     "deploy":
-      "yarn build && scp -r build/* sw:/home/www-data/sites/react-clock.stefanwille.com",
+      "yarn clean && yarn build && scp -r build/* sw:/home/www-data/sites/react-clock.stefanwille.com",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"

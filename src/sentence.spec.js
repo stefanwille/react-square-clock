@@ -1,5 +1,5 @@
 //@ts-check
-const { mapDateToSentence, mapTimeToSentence, toNaturalLanguage } = require('./sentence');
+import { mapDateToSentence, mapTimeToSentence, toNaturalLanguage } from './sentence';
 
 describe('mapDateToSentence()', () => {
   it('takes a date and maps it to a display time', () => {
@@ -49,5 +49,5 @@ describe('mapTimeToSentence()', () => {
     it("wraps around to 1", () => {
       expect(toNaturalLanguage(mapTimeToSentence("12:50"))).toBe("ZEHN VOR EINS");
     });
-  });  
+  });
 });

@@ -1,7 +1,7 @@
 //@ts-check
 const moment = require("moment");
 
-function mapDateToSentence(date) {
+export function mapDateToSentence(date) {
   const time = moment(date).format("hh:mm");
   return mapTimeToSentence(time);
 }
@@ -30,7 +30,7 @@ function getNumber(n) {
   return s;
 }
 
-function mapTimeToSentence(time) {
+export function mapTimeToSentence(time) {
   const [hoursString, minutesString] = time.split(":");
   const hours = parseInt(hoursString, 10);
   const minutes = parseInt(minutesString, 10);
@@ -103,7 +103,7 @@ function mapTimeToSentence(time) {
   return sentence;
 }
 
-function toNaturalLanguage(sentence) {
+export function toNaturalLanguage(sentence) {
   const { it, is, minutes, fraction, relation, hours, oclock } = sentence;
   const present = word => !!word;
   const words = [it, is, minutes, fraction, relation, hours, oclock].filter(
@@ -113,8 +113,6 @@ function toNaturalLanguage(sentence) {
   return natural;
 }
 
-module.exports = {
-  mapDateToSentence,
-  mapTimeToSentence,
-  toNaturalLanguage
-};
+
+
+

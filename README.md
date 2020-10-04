@@ -4,7 +4,7 @@ A clock that mimicks a hardware clock, built with React.
 
 ## Demo
 
-Live:https://react-square-clock.netlify.app/
+Live: https://react-square-clock.netlify.app/
 
 ## Deployment
 
